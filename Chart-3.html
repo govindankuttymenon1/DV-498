@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+h1 {text-align: center; color: darkgreen; font-size: 6;}
+h2 {color: black; font-size: medium;}
+
+</style>
+<head> <h1>Life Expectancy, Fertility Rate and Population Over Time </h1>
+    <h2><br>The following graph depicts the Fertility-Rate and Life-Expectancy for different countries grouped according to regions
+        . Source: World bank data. </h2>
+</head>
+
+<body>
+    <div>
+        <button style="margin-left: 780px; margin-top: 20px;" id="decrement">-</button>
+        <label style="margin-left: 20px; text-align: center;" id="currentYearLabel";></label>
+        <button style="margin-left: 20px; margin-top: 20px;" id="increment">+</button>
+    </div>
+    <div>
+        <input style="margin-left: 780px; margin-top: 20px;" type="range" id="slider"></input>
+    </div>
+    <svg></svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript">
+
+
+        var width = 800, height = 500; margin = 50;
+        var svg = d3.select('svg')
+            .attr("width", width + 2 * margin)
+            .attr("height", height + 2 * margin)
+            .style("pointer-events", "all");
+
+        
+
+        //d3.csv("../../Data/data1.csv")
+          d3.csv("https://govindankuttymenon1.github.io/DV-498/data1.csv")
+            .then(function (data) {
+                //              console.log(data);
+                /*var data1 = function (d) {
+                    return {
+                        CountryCode: d.CountryCode,
+                        CountryName: d.CountryName,
+                        LifeExp: +d.LifeExp,
+                        FertRate: +d.FertRate,
+                        Population: +d.Population,
+                        Region: d.Region,
+                        Year: d.Year
+                    };
+                }*/
+                //              console.log(data1);
+
+                years = data.map(function (d) { return +[d.Year]; })
+                minYear = d3.min(years);
+                maxYear = d3.max(years);
+
+                currentYear = minYear;
+                selected = null;
+
+                var x = d3.scaleLinear()
+                    .domain([0, d3.max(data.map(function (d) { return +[d.LifeExp]; }))])
+                    .range([0, width]);
+
+                var y = d3.scaleLinear()
+                    .domain([0, d3.max(data.map(function (d) { return +[d.FertRate]; }))])
+                    .range([height, 0]);
+
+
+                var minbubblesize = 10;
+                var maxbubblesize = 50;
+
+                var allRegions = data.map(function (d) { return d.Region; });
+                var distinctRegions = d3.set(allRegions).values();
+                distinctRegions.sort()
+
+                var z = d3.scaleLinear()
+                    .domain([d3.min(data.map(function (d) { return +[d.Population]; })),
+                    d3.max(data.map(function (d) { return +[d.Population]; }))])
+                    .range([minbubblesize, maxbubblesize]);
+
+                var c = d3.scaleOrdinal()
+                    .domain(distinctRegions)
+                    .range(d3.schemeCategory10);
+
+                
+
+                document.getElementById("currentYearLabel").innerHTML = currentYear;
+
+                slider = d3.select("input#slider")
+                
+                d3.select('body')
+                .append('div')
+                .attr('id', 'tooltip')
+                .attr('style', 'position: absolute;opacity:0;')
+
+                tooltip = d3.select("#tooltip").style("font-size", "10px")
+
+                slider.attr("min", minYear)
+                    .attr("max", maxYear)
+                    .attr("value", currentYear);
+
+                svg.on("mousedown", function(d) {
+                    if(selected != null) {
+                        selected.attr("stroke-width", 1);
+                    }
+                })
+
+                update(minYear, data);
+                //console.log(distinctRegions);
+
+                /*var timer = d3.interval(function(elapsed){
+                    if (currentYear > (maxYear-1))
+                    {
+                        timer.stop();
+                    } 
+                    else 
+                    {
+                        
+
+                    };
+                    currentYear++;
+                }, 100);*/
+                
+                d3.select("button#increment").on("click",
+                    function handleClick() {
+                        if (currentYear++ >= maxYear) (currentYear = maxYear)
+                        document.getElementById("currentYearLabel").innerHTML = currentYear
+                        slider.attr("value", currentYear)
+                        update(currentYear, data)
+                    });
+
+                d3.select("button#decrement").on("click",
+                    function handleClick() {
+                        if (currentYear-- <= minYear) (currentYear = minYear)
+                        document.getElementById("currentYearLabel").innerHTML = currentYear
+                        slider.attr("value", currentYear)
+                        update(currentYear, data)
+                    });
+
+                d3.select("input#slider").on("input",
+                    function handleClick() {
+                        currentYear = this.value
+                        document.getElementById("currentYearLabel").innerHTML = currentYear
+                        slider.attr("value", currentYear)
+                        update(currentYear, data)
+                    });
+
+
+                function update(year, data) {
+                    svg.selectAll("*")
+                        .remove();
+
+                    svg.append("g")
+                        .attr("transform", "translate(" + margin + "," + margin + ")")
+                        .selectAll('circle')
+                        .data(data)
+                        .enter()
+                        .append('circle')
+                        .filter(function (d) { return +[d.Year] == currentYear })
+                        .attr("cx", function (d) { if (isNaN(d.LifeExp)) {return null;} else if (d.LifeExp == 0) {return null;} else return x(+[d.LifeExp]); })
+                        .attr("cy", function (d) { if (isNaN(d.FertRate)) {return null;} else if (d.FertRate == 0) {return null;} else return y(+[d.FertRate]); })
+                        .attr("r", function (d) { if ((+[d.LifeExp] == 0) || (+[d.FertRate] == 0) || (+[d.Population] ==0)) {return null;} else return z(+[d.Population]); })
+                        .style("fill", function (d) { return c(d.Region); })
+                        .style("stroke", "black")
+                        .on("mouseenter", function(d) {
+
+                            
+                            tooltip.style("opacity", 1)
+                                .style("left", (d3.event.pageX) + "px")
+                                .style("top", (d3.event.pageY) + "px")
+                                .style("background", "lightsteelblue")
+                                .style("padding", "5px")
+                                .style("border", "0px")
+                            tooltip.html(d.CountryName)
+                                .append("div")
+                                .html("Fert Rate : " + (+[d.FertRate]).toFixed(2))
+                                .append("div")
+                                .html("Life Exp : " + (+[d.LifeExp]).toFixed(0) + "Yrs")
+                                .append("div")
+                                .html("Pop : " + (+[d.Population]/1000000).toFixed(2) + "M")
+
+                        })
+                        .on("mouseover", function(d) {
+                            tooltip.style("opacity", 1)
+                                .style("left", (d3.event.pageX) + "px")
+                                .style("top", (d3.event.pageY) + "px")
+                            tooltip.html(d.CountryName)
+                                .append("div")
+                                .html("Fert Rate : " + (+[d.FertRate]).toFixed(2))
+                                .append("div")
+                                .html("Life Exp : " + (+[d.LifeExp]).toFixed(0) + "Yrs")
+                                .append("div")
+                                .html("Pop : " + (+[d.Population]/1000000).toFixed(2) + "M")
+
+                        })
+                        
+                        .on("mouseleave", function(d) {
+                            tooltip.style("opacity", 0)
+                        })
+                        .on("mouseout", function(d) {
+                            tooltip.style("opacity", 0)
+                        })
+                        .on("mousedown", function(d) {
+                           
+                            var clicked = d3.select(this);
+                            clicked.attr("stroke-width", 5)
+                            if (selected != null && selected != clicked){
+                                selected.attr("stroke-width",1);
+                            }
+                            selected=clicked;
+                            d3.event.cancelBubble=true;
+
+
+                        });
+                      
+                        //.on("mousedown", function(d) {console.log("mousedown");})
+                        //.on("mouseup", function(d) {console.log("mouseup");})
+                        /*.on("mousemove", function(d) {
+                            tooltip.style("opacity", 1)
+                                .style("left", (d3.event.pageX) + "px")
+                                .style("top", (d3.event.pageY) + "px")
+                            tooltip.html(d.CountryName)
+                                .append("div")
+                                .html("Fert Rate : " + (+[d.FertRate]).toFixed(2))
+                                .append("div")
+                                .html("Life Exp : " + (+[d.LifeExp]).toFixed(0) + "Yrs")
+                                .append("div")
+                                .html("Pop : " + (+[d.Population]/1000000).toFixed(2) + "M")
+
+                        })*/
+                        //.on("dblclick", function(d) {console.log("dblclick");})
+                    
+                    /*function drawToolTip() {
+                        tooltip.transition()
+                            .duration(200)
+                        tooltip.style("opacity", 1)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY) + "px")
+                        tooltip.html(d.CountryName)
+                           .append("div")
+                            .html("Fert Rate :" + d.FertRate)
+                            .append("div")
+                            .html("Life Expe :" + d.LifeExp)
+                            .append("div")
+                            .html("Population :" + d.Population)
+                    }*/
+
+                    svg.append("g")
+                        .attr("transform", "translate(" + margin + "," + margin + ")")
+                        .style("border", "1px")
+                        .call(d3.axisLeft(y));
+                    //.tickFormat(function(d) { return (d + "Years");});
+
+                    svg.append("g")
+                        .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
+                        .call(d3.axisBottom(x).tickFormat(function (d) { return (d + "Years"); }));
+
+                    svg.append('text')
+                        .text('Life Expectancy')
+                        .style("fill", "blue")
+                        .attr("transform", "translate(" + width / 2 + "," + (height + (margin * 1.75)) + ")");
+
+                    svg.append('text')
+                        .text('Fertility Rate')
+                        .style("fill", "blue")
+                        .attr("transform", "translate(" + (margin * 0.25) + ", " + height / 2 + ") rotate(90)");
+
+                    svg.append('text').html('Life Expectancy, Fertility Rate and Population Over Time')
+                    .attr("color", "blue")
+                    .attr("transform", "translate(" + width / 2.25 + "," + (+ margin * 0.25) + ")");
+
+                    var legendGroup = svg.append('g')
+                        .attr("transform", "translate("+margin*1.5+","+margin+")");
+
+                    var legendBox = legendGroup
+                        .append('rect')
+                        .attr("fill", "white")
+                        .attr("stroke", "black")
+                        .attr("width", 220)
+                        .attr("height", 180)
+                        .attr("fill-opacity", 0.5)
+
+                    //console.log(distinctRegions);
+                    var subLegend = legendGroup.append("g")
+                    var legendSubGroups = subLegend.selectAll('rect')
+                        .data(distinctRegions)
+                        .enter()
+                        .append("g")
+                        .attr("transform", function(d,i) { return "translate(10," +((i*25)+5)+")";});
+
+                    legendSubGroups.append("rect")
+                            .attr("x", 0)
+                            .attr("y",0)
+                            .attr("width",20)
+                            .attr("height",20)
+                            .attr("fill", function(d,i) {return c(distinctRegions[i]);})
+
+                    var legendText = legendSubGroups.append('text')
+                            .text(function (d) {return d;})
+                            .attr("x", 25)
+                            .attr("y",15)
+                }
+
+            });
+/* Start - Display of data in table rows in html document
+        
+                        var table = d3.select("#dataTable")
+        
+                        var rows = table.selectAll("tr")
+                            .data(data)
+                            .enter()
+                            .append("tr");
+        
+                        rows.selectAll("td")
+                            .data(function (d) {
+                                //                      console.log(row);
+                                return d3.keys(d).map(function (column) {
+                                    return { column: column, value: d[column] };
+                                })
+                            })
+                            .enter()
+                            .append("td")
+                            .text(function (d) { return d.value; });
+        
+                        //              console.log("done");
+                    })
+                    .catch(function () {
+                        console.log("error loading file");
+             - Display of data in table rows in html document        */
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
