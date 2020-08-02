@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    h1 {text-align: center; color: black; font-size: 6;}
+
+    h2 {color: black; font-size: medium; font-weight:400;}
+   
+</style>
+
+<head>
+    <h1>Fertility Rate Over Time</h1>
+    <h2>The following graph depicts the average Fertility Rate across different countries in a given region and world population. Source: World bank data. </h2>
+</head>
+
+<body>
+    <div>
+        <button style="margin-left: 200px; margin-top: 20px; font-size: medium;font-weight:400; color: blue;" id="Home">Home</button>
+        <button style="margin-left: 5px; margin-top: 20px; font-size: medium;font-weight:400; color:blue;" id="Life-Exp">Life-Expectancy</button>     
+        <button style="margin-left: 5px; margin-top: 20px; font-size: medium;font-weight:400;" id="Fert-Rate">Fertility-Rate</button>
+        <button style="margin-left: 5px; margin-top: 20px; font-size: medium;font-weight:400; color:blue;" id="Life-Fert-Pop">Life-Exp, Fert-Rate and Population</button>   
+    </div>
+    <div></br></div>
+    <div>      
+        <select style="margin-left: 1040px; margin-top: 20px; font-size: medium;font-weight:300" id="selectButton"></select>
+
+    </div>
+    <div id="my_dataviz"></div>
+    <div id="tooltip" style='position:absolute;background-color:lightgray;padding:5px'></div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script type="text/javascript">
+
+        var margin = { top: 40, right: 300, bottom: 40, left: 40 };
+        var width = 1300 - margin.left - margin.right;
+        var height = 600 - margin.top - margin.bottom;
+        //var width = 800, height = 500; margin = 50; marginright = 50;
+
+        document.getElementById("Fert-Rate").disabled = true;
+
+        var svg = d3.select("#my_dataviz")
+            .append('svg')
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .style("pointer-events", "all");
+
+        d3.csv("https://govindankuttymenon1.github.io/DV-498/sfert1.csv")
+            .then(function (data) {
+                years = data.map(function (d) { return +[d.Year]; })
+                minYear = d3.min(years);
+                maxYear = d3.max(years);
+
+
+                minfert = d3.min(data.map(function (d) { return +[d.fert_rate]; }))
+                maxfert = d3.max(data.map(function (d) { return +[d.fert_rate]; }))
+
+                maxdata = data.filter(function (d) { return +[d.fert_rate] == maxfert})
+                mindata = data.filter(function (d) { return +[d.fert_rate] == minfert})
+
+                //console.log(maxdata)
+
+                //console.log(maxfert)
+                //console.log(maxfert)
+                
+                //console.log(minfert)                
+
+               //console.log(minfert)
+
+                var x = d3.scaleLinear()
+                    .domain([minYear, maxYear])
+                    .range([0, width]);
+
+                var y = d3.scaleLinear()
+                    .domain([0, maxfert + 2])
+                    .range([height, 0]);
+
+                var allregion = data.map(function (d) { return d.region });
+                var allregions = d3.set(allregion).values();
+                allregions.sort()
+                allregions.push("All-Regions")
+
+                var tooltip = d3.select("#tooltip");
+                const tooltipLine = svg.append("line");
+
+
+                d3.select("#selectButton")
+                    .selectAll('myOptions')
+                    .data(allregions)
+                    .enter()
+                    .append('option')
+                    .text(function (d) { return d; })
+                    .attr("value", function (d) { return d; })
+
+                var initialselection = document.getElementById("selectButton")
+                initialselection.value = "All-Regions"
+
+                var color = d3.scaleOrdinal()
+                    .domain(allregions)
+                    .range(d3.schemeCategory10);
+
+                var selectedRegion = "All-Regions"
+
+                var allorselected = true
+
+                update(selectedRegion, allorselected)
+
+                function update(selectedRegion, allorselected) {
+
+                    svg.selectAll("*")
+                        .remove();
+
+                    if (allorselected) {
+                        var i;
+                        for (i = 0; i < allregions.length; i++) {
+                            //if ((allregions[i] != "All-Regions") && (allregions[i] != "World")) { update1(allregions[i], allorselected) };
+                            if ((allregions[i] != "All-Regions")) { update1(allregions[i], allorselected) };
+                        
+                        }
+
+                    }
+                    else {
+                        update1(selectedRegion, allorselected)
+                    }
+
+
+                    var allregion = data.map(function (d) { return d.region });
+                    var legendregions = d3.set(allregion).values();
+
+
+                    if (allorselected) {
+                        var legendGroup = svg.append('g')
+                            //.attr("transform", "translate(" + margin * 1.5 + "," + margin + ")");
+                            .attr("transform", "translate(1000,5)");
+
+                        var legendBox = legendGroup
+                            .append('rect')
+                            .attr("fill", "white")
+                            .attr("stroke", "black")
+                            .attr("width", 220)
+                            .attr("height", 180)
+                            .attr("fill-opacity", 0.5)
+
+
+                        
+                        //legendregions.pop("World")
+
+                        var subLegend = legendGroup.append("g")
+                        var legendSubGroups = subLegend.selectAll('rect')
+                            .data(legendregions)
+                            .enter()
+                            .append("g")
+                            .attr("transform", function (d, i) { return "translate(10," + ((i * 22) + 5) + ")"; });
+
+                        legendSubGroups.append("rect")
+                            .attr("x", 0)
+                            .attr("y", 0)
+                            .attr("width", 20)
+                            .attr("height", 20)
+                            .attr("fill", function (d, i) { return color(allregions[i]); })
+
+                        var legendText = legendSubGroups.append('text')
+                            .text(function (d) { return d; })
+                            .attr("x", 25)
+                            .attr("y", 15)
+
+                    }
+
+                    /*var legendGroup1 = svg.append('g')
+                            //.attr("transform", "translate(" + margin * 1.5 + "," + margin + ")");
+                            .attr("transform", "translate(1000,280)");
+
+
+                    var legendBox1 = legendGroup1
+                            .append('rect')
+                            .attr("fill", "white")
+                            .attr("stroke", "black")
+                            .attr("width", 220)
+                            .attr("height", 65)
+                            .attr("fill-opacity", 0.5)    
+
+                    legendRegion1 = ["Lowest Fert Rate", "Highest Fert Rate"];
+                    legendSize1 = [4,7]
+
+                    var subLegend1 = legendGroup1.append("g")
+                    var legendSubGroups1 = subLegend1.selectAll('rect')
+                            .data(legendRegion1)
+                            //.filter(function(d) { return d == "All"})
+                            .enter()
+                            .append("g")
+                            .attr("transform", function (d, i) { return "translate(10," + ((i * 22) + 5) + ")"; });
+
+                            //.attr("transform", "translate(10,10)");
+
+                    legendSubGroups1.append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", 0)
+                            .attr("r", (function(d,i){ return legendSize1[i]}))
+                            .attr("transform", "translate(10,10)")
+
+                    var legendText1 = legendSubGroups1.append('text')
+                            .text(function(d,i){ return legendRegion1[i]})
+                            //.text(function (d) { return d; })
+                            .attr("x", 25)
+                            .attr("y", 15)*/
+
+                    if (!allorselected) {
+
+                        var dataFilter = data.filter(function (d) { return d.region == selectedRegion });
+
+                        minfertRegion = d3.min(dataFilter.map(function (d) { return +[d.fert_rate]; }))
+
+                        svg
+                           .append("text")
+                            .data(dataFilter)
+                            .html(function (d) { return d.region })
+                            .attr("fill", function (d) { return color(selectedRegion) })
+                            .attr('alignment-baseline', 'middle')
+                            .attr('x', function (d) { return x(maxYear) })
+                            .attr('dx', '.5em')
+                            .attr('y', function (d) { return y(minfertRegion); })
+
+                    }
+                }
+
+                function update1(selectedRegion, allorselected) {
+
+                    var dataFilter = data.filter(function (d) { return d.region == selectedRegion });
+                    
+                    if (!allorselected) {
+                        var dataFilter1 = dataFilter
+                    }
+
+
+                    if (allorselected) {
+                        var dataFilter1 = data.filter(function (d) { return d.region != "All-Regions"});
+
+                        maxdata = data.filter(function (d) { return +[d.fert_rate] == maxfert})
+                        mindata = data.filter(function (d) { return +[d.fert_rate] == minfert})
+                    
+                    }
+                    
+
+                    path = svg
+                        .append("path")
+                        .datum(dataFilter)
+                        .attr("class", "line")
+                        .attr("fill", "none")
+                        .attr("stroke", function (d) { return color(selectedRegion) })
+                        .attr("stroke-width", 3)
+                        .attr("d", d3.line()
+                            .x(function (d) { return x(+[d.Year]); })
+                            .y(function (d) { return y(+[d.fert_rate]); })
+                        )
+
+                    totalLength = path.node().getTotalLength()
+
+                    path
+                        .attr("stroke-dasharray", totalLength + " " + totalLength)
+                        .attr("stroke-dashoffset", totalLength)
+                        .transition()
+                        .duration(3000)
+                        //.delay(3000)
+                        .ease(d3.easeLinear)
+                        .attr("stroke-dashoffset",0)
+
+                    var dataFilter3 = data.filter(function (d) { return d.region == selectedRegion });
+
+                    //console.log(dataFilter3)
+                    maxyvalue = d3.max(dataFilter3.map(function (d) { return +[d.fert_rate]; }))
+                    minyvalue = d3.min(dataFilter3.map(function (d) { return +[d.fert_rate]; }))
+
+                    maxxvalue = d3.max(dataFilter3.map(function (d) { return +[d.Year]; }))
+                    minxvalue = d3.min(dataFilter3.map(function (d) { return +[d.Year]; }))
+
+                    dataFilter5 = []
+                    dataFilter6 = dataFilter3.filter(function (d) {return +[d.fert_rate] == minyvalue;})
+                    dataFilter7 = dataFilter3.filter(function (d) {return +[d.fert_rate] == maxyvalue;})
+
+                    if (!allorselected) {
+                        maxdata = data.filter(function (d) { return +[d.fert_rate] == maxyvalue})
+                        mindata = data.filter(function (d) { return +[d.fert_rate] == minyvalue})
+
+                    }
+
+                    //console.log(dataFilter3[0].life_expectancy)
+                    prioryearfertrate = minyvalue;
+                    for (i=1; i < dataFilter3.length; i++)
+                    {
+
+                        if (Math.round(dataFilter3[i].fert_rate*100)/100 > Math.round(prioryearfertrate*100)/100) 
+                        {
+                            currentyear = dataFilter3[i].Year
+                            console.log(currentyear)
+
+                            dataFilter5.push(dataFilter3[i])
+                            //console.log(dataFilter3)
+                            
+                        }
+                        prioryearfertrate = dataFilter3[i].fert_rate
+                    }
+
+                    svg
+                            .append("g")
+                            .selectAll('circle')
+                            .data(dataFilter6)
+                            //.filter(function(d) { return +d.Year == currentyear})
+                            .enter()
+                            .append('circle')
+                            .attr("cx", function(d) {return x(+[d.Year]);})
+                            .attr("cy", function(d) {return y(+[d.fert_rate]);})
+                            .attr("r", 4)
+                            .attr("fill", function (d) { return color(selectedRegion) })
+                            //.style("stroke", "black")
+                            //.attr("fill", "grey")
+                            //.style("stroke", "red")
+                            //.style("stroke-dasharray", ("10,3"));
+                    
+                        svg
+                            .append("g")
+                            .selectAll('circle')
+                            .data(dataFilter7)
+                            //.filter(function(d) { return +d.Year == currentyear})
+                            .enter()
+                            .append('circle')
+                            .attr("cx", function(d) {return x(+[d.Year]);})
+                            .attr("cy", function(d) {return y(+[d.fert_rate]);})
+                            .attr("r", 7)
+                            //.attr("fill", "grey")
+                            .attr("fill", function (d) { return color(selectedRegion) })
+
+                    /*console.log("maxyvalue")
+                    console.log(maxyvalue)
+                    console.log("minyvalue")
+                    console.log(minyvalue)*/
+
+                    /*maxxvalue = d3.max(dataFilter.map(function (d) { return +[d.Year]; }))
+                    minxvalue = d3.min(dataFilter.map(function (d) { return +[d.Year]; }))
+
+                    dataarray = []
+
+                    priorvalue = minyvalue;
+                    for (i=minxvalue; i < maxxvalue; i++)
+                    {   
+                    if (i == +[d.Year])
+                    {
+                        dataarray.push(d)
+                    }
+                    priorvalue = priorvalue +  (0.1*priorvalue)
+                    i = priorvalue
+
+                    */
+
+                    //var dataFilter2 = dataFilter.filter(function (d) { return Math.round(+[d.life_expectancy] - minyvalue) == Math.round(0.05 * minyvalue);});
+
+                    //var dataFilter4 = dataFilter3.filter(function (d) { return +[d.life_expectancy] == maxyvalue;});
+
+
+                    //console.log(maxyvalue)
+
+                    /*minyvalue = d3.min(dataFilter.map(function (d) { return +[d.life_expectancy]; }))
+
+                    console.log(minyvalue)
+                    dict = {}
+                    dataarray = []
+                    //dataarray = d3.max(dataFilter.map(function (d) { if return +[d.life_expectancy]; }))
+                    priorvalue = minyvalue;
+                    for (i=minyvalue; i < maxyvalue; i++)
+                    {   
+                    priorvalue = priorvalue +  (0.1*priorvalue)
+                    i = priorvalue
+                    //dataarray.push(i)
+                    dict.push({ key: })
+                    //console.log(i)
+
+                    //dataarray.append(i)
+                    
+                    };
+
+                    console.log(dataarray)*/
+                    //console.log(dataFilter4)
+
+                    /*svg
+                        .append("g")
+                        //.selectAll('circle')
+                        .selectAll('circle')
+                        //.append('circle')
+                        .data(dataFilter4)
+                        //.filter(function(d) { if (+[d.life_expectancy] == 0.5 * maxyvalue) return d;})
+                        .enter()
+                        .append('circle')
+                        .attr("cx", function(d) {return x(+[d.Year]);})
+                        .attr("cy", function(d) {return y(+[d.life_expectancy]);})
+                        //.attr("cx", x(2018))
+                        //.attr("cy", y(74))
+                        .attr("r", 7)
+                        .attr("fill", function (d) { return color(selectedRegion) });*/ 
+
+
+                    svg.append("g")
+                        .call(d3.axisLeft(y))
+
+                    svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x).tickFormat(d3.format("d")))//.ticks(12).tickValues([minYear,maxYear]))//.scale(x.nice()))//.scale(x).domain([minYear, maxYear]))
+                        //.call(d3.axisBottom(x).scale(x.nice())) //.outerTickSize(1))//.render())//tickValues([minYear,maxYear]))
+                        //.tickValues(scale.ticks(5).concat(scale.domain()))) 
+                        //.concat(scale.domain()))
+
+                    svg.append("g")
+                        .append('text')
+                        .text('Year')
+                        .style("fill", "black")
+                        .attr("font-weight", "900")
+                        .attr("transform", "translate(" + width / 2 + "," + (height + (margin.bottom)) + ")");
+
+                    svg.append("g")
+                        .append('text')
+                        .text('Fertility Rate')
+                        .style("fill", "black")
+                        .attr("font-weight", "900")
+                        .attr("transform", "translate(" + margin.left * -.80 + ", " + height / 2 + ") rotate(90)");
+
+                    svg.append('text').html('Fertility Rate Over Time')
+                    .style("fill", "black")
+                    .attr("text-decoration", "underline")
+                    .attr("font-size", "larger")
+                    .attr("font-weight", "500")
+                    .attr('x', width/2);
+
+                    svg.append('text').html('Hover over me!')
+                    .style("fill", "yellowgreen")
+                    .attr("font-size", "medium")
+                    //.style("fill", "black")
+                    //.attr("font-weight", "900")
+                    .attr("transform", "translate(" + width / 2 + "," + (margin.bottom)*2 + ")");
+
+
+
+                    svg.append('text')
+                    .data(maxdata)
+                    .style("fill", function(d) {return color(d.region)})
+                    .html(function (d) { return 'Higest Fert Rate'})  
+                    .attr('x', function (d) { if (!allorselected) {return x(+[d.Year])}
+                                            if (allorselected) { return x(+[d.Year])}
+                    })
+                    .attr('y', function (d) {return y(+[d.fert_rate] + 0.5)})
+                    .append("div")
+                    .enter()
+
+
+                    svg.append('text')
+                    .data(maxdata)
+                    .style("fill", function(d) {return color(d.region)})
+                    .html(function (d) { if (!allorselected) { return (+ d.Year + " :" + Math.round(d.fert_rate*100)/100)} 
+                                        if (allorselected) { return (d.region + "(" + d.Year + ") :" + Math.round(d.fert_rate*100)/100)} 
+                    })  
+                    .attr('x', function (d) { if (!allorselected) { return x(+[d.Year])}
+                                              if (allorselected) { return x(+[d.Year])}
+                    })
+                    .attr('y', function (d) {return y(+[d.fert_rate] + 0.2)})
+                    .append("div")
+                    .enter()
+
+
+                    svg.append('text')
+                    .data(mindata)
+                    .style("fill", function(d) {return color(d.region)})
+                    .html(function (d) { return 'Lowest Fert Rate'})  
+                    .attr('x', function (d) { return x(+[d.Year])})
+                    .attr('y', function (d) {return y(+[d.fert_rate] - 0.4)})
+                    .append("div")
+                    .enter()
+
+
+                    svg.append('text')
+                    .data(mindata)
+                    .style("fill", function(d) {return color(d.region)})
+                    .html(function (d) { if (!allorselected) {return (d.Year + " :" + Math.round(d.fert_rate*100)/100)}
+                                         if (allorselected) {return (d.region + "(" + d.Year + ") :" + Math.round(d.fert_rate*100)/100)}
+                    })  
+                    .attr('x', function (d) { return x(+[d.Year])})
+                    .attr('y', function (d) {return y(+[d.fert_rate] - 0.7)})
+                    .append("div")
+                    .enter()
+
+
+                    tipBox =
+                    svg.append('rect')
+                        .attr('width', width)
+                        .attr('height', height)
+                        .attr('opacity', 0)
+                        .on('mouseover', drawTooltip)
+                        .on('mousemove', drawTooltip)
+                        .on('mouseout', removeTooltip)
+                        .on('mouseleave', removeTooltip);
+
+                function removeTooltip() {
+                    if (tooltip) tooltip.style('display', 'none');
+                    if (tooltipLine) tooltipLine.attr('stroke', 'none');
+                    svg.selectAll("line")
+                        .remove();
+                }
+
+                function drawTooltip() {
+                    tooltipyear = Math.round(x.invert(d3.mouse(tipBox.node())[0]));
+
+                    svg.selectAll("line")
+                        .remove()
+
+                    svg.append("g").append("line")
+                    .attr('stroke', 'black')
+                        .attr('x1', x(tooltipyear))
+                        .attr('x2', x(tooltipyear))
+                        .attr('y1', 0)
+                        .attr('y2', height);
+
+                    tooltip.html("Year :" + tooltipyear)
+                    .style('display', 'block')
+                    .style("color", function() { if (!allorselected) return color(selectedRegion)})
+                    .style('left', (d3.event.pageX) + 20 + "px")
+                    .style('top', (d3.event.pageY) + 20 + "px")
+                    .append("div")
+                    .selectAll()
+                    .data(dataFilter1)
+                    .enter()
+                    .append("div")
+                    .style("color", function() { if (!allorselected) return color(selectedRegion)})
+                    .html(function (d) { if (!allorselected) { if (tooltipyear == d.Year) return ("Fert-Rate: " + Math.round(d.fert_rate * 100)/100)} 
+                    if (allorselected) { if (tooltipyear == d.Year) return (d.region + " (Fert-Rate): " + Math.round(d.fert_rate*100)/100)}} )
+
+                }
+                    
+                }
+
+ 
+                    d3.select("#selectButton").on("change", function (d) {
+                        var selectedRegion = d3.select(this).property("value");
+                        var allorselected = true
+                        if (selectedRegion == "All-Regions") {
+                            allorselected = true;
+                        }
+                        else allorselected = false
+                        update(selectedRegion, allorselected)
+
+                    });
+
+
+                    d3.select("button#Home").on("click",
+                    function handleClick() {
+                        console.log("clicked")
+                        location.href = "https://govindankuttymenon1.github.io/DV-498/SChart-0.html"    
+                    });
+
+                    d3.select("button#Life-Exp").on("click",
+                    function handleClick() {
+                        console.log("clicked")
+                        location.href = "https://govindankuttymenon1.github.io/DV-498/SChart-1.html"    
+                    });
+
+                    d3.select("button#Life-Fert-Pop").on("click",
+                    function handleClick() {
+                        console.log("clicked")
+                        location.href = "https://govindankuttymenon1.github.io/DV-498/SChart-3.html"    
+                    });
+
+                    
+
+                    
+                });
+    </script>
+</body>
+
+</html>
