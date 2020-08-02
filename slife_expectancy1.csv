@@ -1,0 +1,473 @@
+﻿region,Year,life_expectancy
+East Asia & Pacific,1960,54.64389772
+East Asia & Pacific,1961,55.12059638
+East Asia & Pacific,1962,55.59727695
+East Asia & Pacific,1963,56.10197797
+East Asia & Pacific,1964,56.59660582
+East Asia & Pacific,1965,57.07988277
+East Asia & Pacific,1966,57.58651534
+East Asia & Pacific,1967,58.08248151
+East Asia & Pacific,1968,58.53397482
+East Asia & Pacific,1969,58.97454445
+East Asia & Pacific,1970,59.37298584
+East Asia & Pacific,1971,59.71976239
+East Asia & Pacific,1972,59.99354839
+East Asia & Pacific,1973,60.22602203
+East Asia & Pacific,1974,60.45234304
+East Asia & Pacific,1975,60.69212982
+East Asia & Pacific,1976,60.92100944
+East Asia & Pacific,1977,61.23755232
+East Asia & Pacific,1978,61.63929426
+East Asia & Pacific,1979,62.09653501
+East Asia & Pacific,1980,62.62999685
+East Asia & Pacific,1981,63.23689457
+East Asia & Pacific,1982,63.80015814
+East Asia & Pacific,1983,64.35660504
+East Asia & Pacific,1984,64.85596617
+East Asia & Pacific,1985,65.29630291
+East Asia & Pacific,1986,65.68973485
+East Asia & Pacific,1987,66.22643674
+East Asia & Pacific,1988,66.33329898
+East Asia & Pacific,1989,66.61573722
+East Asia & Pacific,1990,67.01625991
+East Asia & Pacific,1991,67.23274823
+East Asia & Pacific,1992,67.49054603
+East Asia & Pacific,1993,67.733631
+East Asia & Pacific,1994,67.93795515
+East Asia & Pacific,1995,68.28066235
+East Asia & Pacific,1996,68.44073643
+East Asia & Pacific,1997,68.71614949
+East Asia & Pacific,1998,69.08250748
+East Asia & Pacific,1999,69.28612729
+East Asia & Pacific,2000,69.6248167
+East Asia & Pacific,2001,70.06546499
+East Asia & Pacific,2002,70.38592526
+East Asia & Pacific,2003,70.71221951
+East Asia & Pacific,2004,71.05049567
+East Asia & Pacific,2005,71.28099466
+East Asia & Pacific,2006,71.67119906
+East Asia & Pacific,2007,71.9558332
+East Asia & Pacific,2008,72.22704249
+East Asia & Pacific,2009,72.52760189
+East Asia & Pacific,2010,72.77593392
+East Asia & Pacific,2011,73.00732907
+East Asia & Pacific,2012,73.27312029
+East Asia & Pacific,2013,73.52738839
+East Asia & Pacific,2014,73.76077795
+East Asia & Pacific,2015,73.98088312
+East Asia & Pacific,2016,74.16559286
+East Asia & Pacific,2017,74.3731133
+East Asia & Pacific,2018,74.55162549
+Europe & Central Asia,1960,66.1566383
+Europe & Central Asia,1961,66.56694344
+Europe & Central Asia,1962,66.67191697
+Europe & Central Asia,1963,66.9895314
+Europe & Central Asia,1964,67.42486871
+Europe & Central Asia,1965,67.6076383
+Europe & Central Asia,1966,67.86785781
+Europe & Central Asia,1967,68.05844473
+Europe & Central Asia,1968,68.20156409
+Europe & Central Asia,1969,68.27118993
+Europe & Central Asia,1970,68.54643747
+Europe & Central Asia,1971,68.71518267
+Europe & Central Asia,1972,68.99077374
+Europe & Central Asia,1973,69.27981606
+Europe & Central Asia,1974,69.37646757
+Europe & Central Asia,1975,69.51920706
+Europe & Central Asia,1976,69.71606694
+Europe & Central Asia,1977,69.93177686
+Europe & Central Asia,1978,70.01896516
+Europe & Central Asia,1979,70.05815955
+Europe & Central Asia,1980,70.17621646
+Europe & Central Asia,1981,70.38499543
+Europe & Central Asia,1982,70.61981098
+Europe & Central Asia,1983,70.71035671
+Europe & Central Asia,1984,70.94253659
+Europe & Central Asia,1985,71.10231148
+Europe & Central Asia,1986,71.52310105
+Europe & Central Asia,1987,71.6984435
+Europe & Central Asia,1988,71.80861971
+Europe & Central Asia,1989,71.93148084
+Europe & Central Asia,1990,71.93244898
+Europe & Central Asia,1991,71.94605317
+Europe & Central Asia,1992,71.99592882
+Europe & Central Asia,1993,71.89234296
+Europe & Central Asia,1994,72.18140172
+Europe & Central Asia,1995,72.15885707
+Europe & Central Asia,1996,72.4901
+Europe & Central Asia,1997,72.71793592
+Europe & Central Asia,1998,72.98098439
+Europe & Central Asia,1999,73.24709268
+Europe & Central Asia,2000,73.43225251
+Europe & Central Asia,2001,73.79215878
+Europe & Central Asia,2002,74.03746857
+Europe & Central Asia,2003,74.15230177
+Europe & Central Asia,2004,74.55834543
+Europe & Central Asia,2005,74.68800942
+Europe & Central Asia,2006,74.9668637
+Europe & Central Asia,2007,75.20028407
+Europe & Central Asia,2008,75.55137733
+Europe & Central Asia,2009,75.85427834
+Europe & Central Asia,2010,76.13839933
+Europe & Central Asia,2011,76.56609278
+Europe & Central Asia,2012,76.94049062
+Europe & Central Asia,2013,77.05724247
+Europe & Central Asia,2014,77.35724677
+Europe & Central Asia,2015,77.37847585
+Europe & Central Asia,2016,77.62446724
+Europe & Central Asia,2017,77.92030342
+Europe & Central Asia,2018,78.04213415
+Latin America & Caribbean,1960,57.95207245
+Latin America & Caribbean,1961,58.42721019
+Latin America & Caribbean,1962,58.88363343
+Latin America & Caribbean,1963,59.3231241
+Latin America & Caribbean,1964,59.74769584
+Latin America & Caribbean,1965,60.16074319
+Latin America & Caribbean,1966,60.56496557
+Latin America & Caribbean,1967,60.96290316
+Latin America & Caribbean,1968,61.35714347
+Latin America & Caribbean,1969,61.74961263
+Latin America & Caribbean,1970,62.14190387
+Latin America & Caribbean,1971,62.53444835
+Latin America & Caribbean,1972,62.92573745
+Latin America & Caribbean,1973,63.31442109
+Latin America & Caribbean,1974,63.70010258
+Latin America & Caribbean,1975,64.08169225
+Latin America & Caribbean,1976,64.45833429
+Latin America & Caribbean,1977,64.82897776
+Latin America & Caribbean,1978,65.19311693
+Latin America & Caribbean,1979,65.5505122
+Latin America & Caribbean,1980,65.90151076
+Latin America & Caribbean,1981,66.2467109
+Latin America & Caribbean,1982,66.8267561
+Latin America & Caribbean,1983,67.08974774
+Latin America & Caribbean,1984,67.41543903
+Latin America & Caribbean,1985,67.7243331
+Latin America & Caribbean,1986,68.05854146
+Latin America & Caribbean,1987,68.39757284
+Latin America & Caribbean,1988,68.67744042
+Latin America & Caribbean,1989,68.96557561
+Latin America & Caribbean,1990,69.24891359
+Latin America & Caribbean,1991,69.55737561
+Latin America & Caribbean,1992,69.86500659
+Latin America & Caribbean,1993,70.05956307
+Latin America & Caribbean,1994,70.31260418
+Latin America & Caribbean,1995,70.55849199
+Latin America & Caribbean,1996,70.80380627
+Latin America & Caribbean,1997,71.15323995
+Latin America & Caribbean,1998,71.29197143
+Latin America & Caribbean,1999,71.53557352
+Latin America & Caribbean,2000,71.80261463
+Latin America & Caribbean,2001,72.06544948
+Latin America & Caribbean,2002,72.39100857
+Latin America & Caribbean,2003,72.5190892
+Latin America & Caribbean,2004,72.73348502
+Latin America & Caribbean,2005,72.92076516
+Latin America & Caribbean,2006,73.19115108
+Latin America & Caribbean,2007,73.38051615
+Latin America & Caribbean,2008,73.55322742
+Latin America & Caribbean,2009,73.79541266
+Latin America & Caribbean,2010,74.10569851
+Latin America & Caribbean,2011,74.16623984
+Latin America & Caribbean,2012,74.31410481
+Latin America & Caribbean,2013,74.53217209
+Latin America & Caribbean,2014,74.76661107
+Latin America & Caribbean,2015,74.93266579
+Latin America & Caribbean,2016,75.1036058
+Latin America & Caribbean,2017,75.17486314
+Latin America & Caribbean,2018,75.24783484
+Middle East & North Africa,1960,49.66696021
+Middle East & North Africa,1961,51.44559878
+Middle East & North Africa,1962,52.11454268
+Middle East & North Africa,1963,51.76083954
+Middle East & North Africa,1964,52.45872272
+Middle East & North Africa,1965,53.15410141
+Middle East & North Africa,1966,54.76893293
+Middle East & North Africa,1967,55.38579146
+Middle East & North Africa,1968,56.01638171
+Middle East & North Africa,1969,56.66187195
+Middle East & North Africa,1970,57.32208537
+Middle East & North Africa,1971,57.99557805
+Middle East & North Africa,1972,58.61201463
+Middle East & North Africa,1973,59.28869268
+Middle East & North Africa,1974,59.92599512
+Middle East & North Africa,1975,60.56711098
+Middle East & North Africa,1976,61.2065439
+Middle East & North Africa,1977,61.76681707
+Middle East & North Africa,1978,62.30567195
+Middle East & North Africa,1979,62.81677561
+Middle East & North Africa,1980,63.31367317
+Middle East & North Africa,1981,63.8106939
+Middle East & North Africa,1982,64.29409512
+Middle East & North Africa,1983,64.82377683
+Middle East & North Africa,1984,65.37431463
+Middle East & North Africa,1985,65.94207317
+Middle East & North Africa,1986,66.47961463
+Middle East & North Africa,1987,67.02996829
+Middle East & North Africa,1988,67.4952622
+Middle East & North Africa,1989,68.05867927
+Middle East & North Africa,1990,68.4810662
+Middle East & North Africa,1991,68.875
+Middle East & North Africa,1992,69.21536585
+Middle East & North Africa,1993,69.57114983
+Middle East & North Africa,1994,69.88471312
+Middle East & North Africa,1995,70.13430778
+Middle East & North Africa,1996,70.42501626
+Middle East & North Africa,1997,70.68414402
+Middle East & North Africa,1998,70.92088502
+Middle East & North Africa,1999,71.17321603
+Middle East & North Africa,2000,71.45940186
+Middle East & North Africa,2001,71.73891522
+Middle East & North Africa,2002,71.97220209
+Middle East & North Africa,2003,72.20876771
+Middle East & North Africa,2004,72.50119048
+Middle East & North Africa,2005,72.73205807
+Middle East & North Africa,2006,72.97312776
+Middle East & North Africa,2007,73.18602671
+Middle East & North Africa,2008,73.37960976
+Middle East & North Africa,2009,73.5928734
+Middle East & North Africa,2010,73.80833333
+Middle East & North Africa,2011,73.92602091
+Middle East & North Africa,2012,74.07696283
+Middle East & North Africa,2013,74.29873519
+Middle East & North Africa,2014,74.48580952
+Middle East & North Africa,2015,74.65356098
+Middle East & North Africa,2016,74.88633217
+Middle East & North Africa,2017,75.08164576
+Middle East & North Africa,2018,75.29153426
+North America,1960,70.45195122
+North America,1961,70.80841464
+North America,1962,70.74329269
+North America,1963,70.64890244
+North America,1964,70.97109756
+North America,1965,70.32821138
+North America,1966,71.10829268
+North America,1967,71.38439025
+North America,1968,71.15231707
+North America,1969,71.50439024
+North America,1970,71.26593496
+North America,1971,72.06829268
+North America,1972,72.045
+North America,1973,72.25939025
+North America,1974,72.59682927
+North America,1975,73.06329269
+North America,1976,73.35609756
+North America,1977,73.73585366
+North America,1978,73.94292683
+North America,1979,74.33560976
+North America,1980,73.66414634
+North America,1981,74.73658537
+North America,1982,75.06219512
+North America,1983,75.26463415
+North America,1984,75.3902439
+North America,1985,75.46585366
+North America,1986,75.56707318
+North America,1987,75.74268293
+North America,1988,75.84268293
+North America,1989,76.06829269
+North America,1990,76.31829269
+North America,1991,75.67243903
+North America,1992,76.67073171
+North America,1993,76.62195122
+North America,1994,76.72317074
+North America,1995,76.82560976
+North America,1996,77.10365854
+North America,1997,77.43048781
+North America,1998,77.60731707
+North America,1999,77.73414634
+North America,2000,77.88617886
+North America,2001,78.0203252
+North America,2002,78.17154472
+North America,2003,78.37073171
+North America,2004,78.62195122
+North America,2005,78.78861789
+North America,2006,78.97317073
+North America,2007,79.15528455
+North America,2008,79.32357724
+North America,2009,79.59126829
+North America,2010,79.69211382
+North America,2011,80.41430894
+North America,2012,80.68934959
+North America,2013,80.35422764
+North America,2014,80.47959349
+North America,2015,80.53414634
+North America,2016,80.55536585
+North America,2017,80.64325203
+North America,2018,80.71317073
+South Asia,1960,41.420875
+South Asia,1961,41.961375
+South Asia,1962,42.5135
+South Asia,1963,43.076875
+South Asia,1964,43.647125
+South Asia,1965,44.213125
+South Asia,1966,44.76025
+South Asia,1967,45.279375
+South Asia,1968,45.768625
+South Asia,1969,46.23275
+South Asia,1970,46.6865
+South Asia,1971,47.1495
+South Asia,1972,47.640125
+South Asia,1973,48.170125
+South Asia,1974,48.74225
+South Asia,1975,49.353375
+South Asia,1976,49.993625
+South Asia,1977,50.64475
+South Asia,1978,51.29075
+South Asia,1979,51.9235
+South Asia,1980,52.534375
+South Asia,1981,53.11925
+South Asia,1982,53.681625
+South Asia,1983,54.227625
+South Asia,1984,54.7605
+South Asia,1985,55.289
+South Asia,1986,55.823125
+South Asia,1987,56.369375
+South Asia,1988,56.9325
+South Asia,1989,57.512375
+South Asia,1990,58.10325
+South Asia,1991,58.6955
+South Asia,1992,59.279125
+South Asia,1993,59.84875
+South Asia,1994,60.405
+South Asia,1995,60.955375
+South Asia,1996,61.5125
+South Asia,1997,62.0865
+South Asia,1998,62.680875
+South Asia,1999,63.292375
+South Asia,2000,63.911375
+South Asia,2001,64.523375
+South Asia,2002,65.113625
+South Asia,2003,65.670625
+South Asia,2004,66.189625
+South Asia,2005,66.67175
+South Asia,2006,67.122375
+South Asia,2007,67.5525
+South Asia,2008,67.970375
+South Asia,2009,68.378375
+South Asia,2010,68.775625
+South Asia,2011,69.1595
+South Asia,2012,69.525375
+South Asia,2013,69.870375
+South Asia,2014,70.1955
+South Asia,2015,70.502
+South Asia,2016,70.792375
+South Asia,2017,71.070625
+South Asia,2018,71.339125
+Sub-Saharan Africa,1960,40.98700467
+Sub-Saharan Africa,1961,41.41222055
+Sub-Saharan Africa,1962,41.83255112
+Sub-Saharan Africa,1963,42.24822678
+Sub-Saharan Africa,1964,42.66082875
+Sub-Saharan Africa,1965,43.0719424
+Sub-Saharan Africa,1966,43.48407888
+Sub-Saharan Africa,1967,43.89924079
+Sub-Saharan Africa,1968,44.32016347
+Sub-Saharan Africa,1969,44.74823819
+Sub-Saharan Africa,1970,45.18597976
+Sub-Saharan Africa,1971,45.63583705
+Sub-Saharan Africa,1972,46.09648832
+Sub-Saharan Africa,1973,46.56533057
+Sub-Saharan Africa,1974,47.03987182
+Sub-Saharan Africa,1975,47.5174795
+Sub-Saharan Africa,1976,47.99588583
+Sub-Saharan Africa,1977,48.47073275
+Sub-Saharan Africa,1978,48.93624079
+Sub-Saharan Africa,1979,49.3869315
+Sub-Saharan Africa,1980,50.23208232
+Sub-Saharan Africa,1981,50.6513374
+Sub-Saharan Africa,1982,51.02078659
+Sub-Saharan Africa,1983,51.40521951
+Sub-Saharan Africa,1984,51.71660468
+Sub-Saharan Africa,1985,51.99817175
+Sub-Saharan Africa,1986,52.18738465
+Sub-Saharan Africa,1987,52.3157312
+Sub-Saharan Africa,1988,52.39078049
+Sub-Saharan Africa,1989,52.37699492
+Sub-Saharan Africa,1990,52.33106657
+Sub-Saharan Africa,1991,52.3111936
+Sub-Saharan Africa,1992,52.23125356
+Sub-Saharan Africa,1993,52.11886687
+Sub-Saharan Africa,1994,52.09945427
+Sub-Saharan Africa,1995,52.12778709
+Sub-Saharan Africa,1996,52.1271438
+Sub-Saharan Africa,1997,52.16270986
+Sub-Saharan Africa,1998,52.24082622
+Sub-Saharan Africa,1999,52.36196392
+Sub-Saharan Africa,2000,52.52236382
+Sub-Saharan Africa,2001,52.746844
+Sub-Saharan Africa,2002,52.99961789
+Sub-Saharan Africa,2003,53.38228269
+Sub-Saharan Africa,2004,53.88724424
+Sub-Saharan Africa,2005,54.43268547
+Sub-Saharan Africa,2006,55.06702642
+Sub-Saharan Africa,2007,55.78074238
+Sub-Saharan Africa,2008,56.50819055
+Sub-Saharan Africa,2009,57.25569512
+Sub-Saharan Africa,2010,57.99897663
+Sub-Saharan Africa,2011,58.71567124
+Sub-Saharan Africa,2012,59.45314634
+Sub-Saharan Africa,2013,60.08840803
+Sub-Saharan Africa,2014,60.70274289
+Sub-Saharan Africa,2015,61.27877693
+Sub-Saharan Africa,2016,61.76730488
+Sub-Saharan Africa,2017,62.20032571
+Sub-Saharan Africa,2018,62.5506001
+World-Avg,1960,53.80864712
+World-Avg,1961,54.37303781
+World-Avg,1962,54.75743154
+World-Avg,1963,55.10473897
+World-Avg,1964,55.57329333
+World-Avg,1965,56.03967983
+World-Avg,1966,56.47412208
+World-Avg,1967,56.86786489
+World-Avg,1968,57.23808762
+World-Avg,1969,57.59639708
+World-Avg,1970,58.06601271
+World-Avg,1971,58.37685689
+World-Avg,1972,58.76099303
+World-Avg,1973,59.20711759
+World-Avg,1974,59.49759595
+World-Avg,1975,59.85848484
+World-Avg,1976,60.22956885
+World-Avg,1977,60.61075855
+World-Avg,1978,61.06095288
+World-Avg,1979,61.35832721
+World-Avg,1980,61.81937767
+World-Avg,1981,62.16291585
+World-Avg,1982,62.65259203
+World-Avg,1983,62.94567391
+World-Avg,1984,63.30242124
+World-Avg,1985,63.62211154
+World-Avg,1986,64.01745381
+World-Avg,1987,64.37436088
+World-Avg,1988,64.51022343
+World-Avg,1989,64.72036522
+World-Avg,1990,64.92501776
+World-Avg,1991,65.15265107
+World-Avg,1992,65.27147959
+World-Avg,1993,65.30559656
+World-Avg,1994,65.57810391
+World-Avg,1995,65.70775373
+World-Avg,1996,65.90582877
+World-Avg,1997,66.21825918
+World-Avg,1998,66.35582477
+World-Avg,1999,66.59732081
+World-Avg,2000,66.94686322
+World-Avg,2001,67.24027386
+World-Avg,2002,67.60600451
+World-Avg,2003,67.77271677
+World-Avg,2004,68.14826668
+World-Avg,2005,68.44539932
+World-Avg,2006,68.83611173
+World-Avg,2007,69.21202243
+World-Avg,2008,69.59159125
+World-Avg,2009,69.98431474
+World-Avg,2010,70.35416507
+World-Avg,2011,70.72424319
+World-Avg,2012,71.14816206
+World-Avg,2013,71.39883489
+World-Avg,2014,71.75429523
+World-Avg,2015,71.99468739
+World-Avg,2016,72.27268005
+World-Avg,2017,72.49087161
+World-Avg,2018,72.66982068

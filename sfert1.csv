@@ -1,0 +1,473 @@
+﻿Year,region,fert_rate
+1960,East Asia & Pacific,5.979064516
+1961,East Asia & Pacific,5.945322581
+1962,East Asia & Pacific,5.901322581
+1963,East Asia & Pacific,5.842817204
+1964,East Asia & Pacific,5.761989247
+1965,East Asia & Pacific,5.672354839
+1966,East Asia & Pacific,5.560645161
+1967,East Asia & Pacific,5.47
+1968,East Asia & Pacific,5.373580645
+1969,East Asia & Pacific,5.272387097
+1970,East Asia & Pacific,5.179096774
+1971,East Asia & Pacific,5.109248848
+1972,East Asia & Pacific,4.993304147
+1973,East Asia & Pacific,4.872262673
+1974,East Asia & Pacific,4.739898618
+1975,East Asia & Pacific,4.598695853
+1976,East Asia & Pacific,4.486751152
+1977,East Asia & Pacific,4.389483871
+1978,East Asia & Pacific,4.299645161
+1979,East Asia & Pacific,4.244354839
+1980,East Asia & Pacific,4.185193548
+1981,East Asia & Pacific,4.132935484
+1982,East Asia & Pacific,4.069032258
+1983,East Asia & Pacific,3.997516129
+1984,East Asia & Pacific,3.922
+1985,East Asia & Pacific,3.854258065
+1986,East Asia & Pacific,3.782225806
+1987,East Asia & Pacific,3.79009375
+1988,East Asia & Pacific,3.665129032
+1989,East Asia & Pacific,3.581064516
+1990,East Asia & Pacific,3.5035625
+1991,East Asia & Pacific,3.455129032
+1992,East Asia & Pacific,3.385322581
+1993,East Asia & Pacific,3.307903226
+1994,East Asia & Pacific,3.237774194
+1995,East Asia & Pacific,3.13984375
+1996,East Asia & Pacific,3.103741935
+1997,East Asia & Pacific,3.044258065
+1998,East Asia & Pacific,2.97816129
+1999,East Asia & Pacific,3.016625
+2000,East Asia & Pacific,2.86740625
+2001,East Asia & Pacific,2.841387097
+2002,East Asia & Pacific,2.795419355
+2003,East Asia & Pacific,2.756064516
+2004,East Asia & Pacific,2.723096774
+2005,East Asia & Pacific,2.726484848
+2006,East Asia & Pacific,2.73278125
+2007,East Asia & Pacific,2.7173125
+2008,East Asia & Pacific,2.636225806
+2009,East Asia & Pacific,2.607483871
+2010,East Asia & Pacific,2.589483871
+2011,East Asia & Pacific,2.616
+2012,East Asia & Pacific,2.5523125
+2013,East Asia & Pacific,2.524612903
+2014,East Asia & Pacific,2.506870968
+2015,East Asia & Pacific,2.47784375
+2016,East Asia & Pacific,2.457806452
+2017,East Asia & Pacific,2.423483871
+2018,East Asia & Pacific,2.394322581
+1960,Europe & Central Asia,3.327458333
+1961,Europe & Central Asia,3.303204082
+1962,Europe & Central Asia,3.2923125
+1963,Europe & Central Asia,3.302404255
+1964,Europe & Central Asia,3.258791667
+1965,Europe & Central Asia,3.195875
+1966,Europe & Central Asia,3.139125
+1967,Europe & Central Asia,3.109395833
+1968,Europe & Central Asia,3.043666667
+1969,Europe & Central Asia,2.987458333
+1970,Europe & Central Asia,2.936755102
+1971,Europe & Central Asia,2.88452
+1972,Europe & Central Asia,2.832571429
+1973,Europe & Central Asia,2.759265306
+1974,Europe & Central Asia,2.726020408
+1975,Europe & Central Asia,2.65134
+1976,Europe & Central Asia,2.5886
+1977,Europe & Central Asia,2.52706
+1978,Europe & Central Asia,2.4758
+1979,Europe & Central Asia,2.44272
+1980,Europe & Central Asia,2.40402
+1981,Europe & Central Asia,2.398038462
+1982,Europe & Central Asia,2.382627451
+1983,Europe & Central Asia,2.344529412
+1984,Europe & Central Asia,2.331039216
+1985,Europe & Central Asia,2.300588235
+1986,Europe & Central Asia,2.288568627
+1987,Europe & Central Asia,2.272482353
+1988,Europe & Central Asia,2.268745098
+1989,Europe & Central Asia,2.218254902
+1990,Europe & Central Asia,2.195039216
+1991,Europe & Central Asia,2.132692308
+1992,Europe & Central Asia,2.074156863
+1993,Europe & Central Asia,1.999941176
+1994,Europe & Central Asia,1.926865385
+1995,Europe & Central Asia,1.876596154
+1996,Europe & Central Asia,1.836098039
+1997,Europe & Central Asia,1.7855
+1998,Europe & Central Asia,1.744588235
+1999,Europe & Central Asia,1.727862745
+2000,Europe & Central Asia,1.721320755
+2001,Europe & Central Asia,1.683207547
+2002,Europe & Central Asia,1.681462963
+2003,Europe & Central Asia,1.673641509
+2004,Europe & Central Asia,1.702084906
+2005,Europe & Central Asia,1.703830189
+2006,Europe & Central Asia,1.711796296
+2007,Europe & Central Asia,1.735703704
+2008,Europe & Central Asia,1.776685185
+2009,Europe & Central Asia,1.779203704
+2010,Europe & Central Asia,1.77562963
+2011,Europe & Central Asia,1.758660377
+2012,Europe & Central Asia,1.7585
+2013,Europe & Central Asia,1.749981132
+2014,Europe & Central Asia,1.771490566
+2015,Europe & Central Asia,1.762056604
+2016,Europe & Central Asia,1.771660377
+2017,Europe & Central Asia,1.743660377
+2018,Europe & Central Asia,1.738811321
+1960,Latin America & Caribbean,5.929911765
+1961,Latin America & Caribbean,5.903088235
+1962,Latin America & Caribbean,5.860617647
+1963,Latin America & Caribbean,5.801647059
+1964,Latin America & Caribbean,5.727147059
+1965,Latin America & Caribbean,5.638529412
+1966,Latin America & Caribbean,5.538764706
+1967,Latin America & Caribbean,5.431764706
+1968,Latin America & Caribbean,5.321441176
+1969,Latin America & Caribbean,5.209911765
+1970,Latin America & Caribbean,5.098941176
+1971,Latin America & Caribbean,4.988382353
+1972,Latin America & Caribbean,4.856277778
+1973,Latin America & Caribbean,4.765676471
+1974,Latin America & Caribbean,4.654794118
+1975,Latin America & Caribbean,4.546205882
+1976,Latin America & Caribbean,4.441529412
+1977,Latin America & Caribbean,4.341705882
+1978,Latin America & Caribbean,4.247441176
+1979,Latin America & Caribbean,4.158676471
+1980,Latin America & Caribbean,4.075235294
+1981,Latin America & Caribbean,3.995970588
+1982,Latin America & Caribbean,3.852
+1983,Latin America & Caribbean,3.803485714
+1984,Latin America & Caribbean,3.728857143
+1985,Latin America & Caribbean,3.656971429
+1986,Latin America & Caribbean,3.582885714
+1987,Latin America & Caribbean,3.484594595
+1988,Latin America & Caribbean,3.4534
+1989,Latin America & Caribbean,3.392657143
+1990,Latin America & Caribbean,3.329057143
+1991,Latin America & Caribbean,3.266228571
+1992,Latin America & Caribbean,3.136763158
+1993,Latin America & Caribbean,3.137485714
+1994,Latin America & Caribbean,3.075028571
+1995,Latin America & Caribbean,3.011657143
+1996,Latin America & Caribbean,2.944428571
+1997,Latin America & Caribbean,2.840702703
+1998,Latin America & Caribbean,2.817342857
+1999,Latin America & Caribbean,2.758407143
+2000,Latin America & Caribbean,2.700585714
+2001,Latin America & Caribbean,2.617822222
+2002,Latin America & Caribbean,2.558208108
+2003,Latin America & Caribbean,2.516761111
+2004,Latin America & Caribbean,2.491948571
+2005,Latin America & Caribbean,2.451691429
+2006,Latin America & Caribbean,2.397286111
+2007,Latin America & Caribbean,2.348905405
+2008,Latin America & Caribbean,2.327691892
+2009,Latin America & Caribbean,2.295210811
+2010,Latin America & Caribbean,2.284986111
+2011,Latin America & Caribbean,2.246527027
+2012,Latin America & Caribbean,2.227152778
+2013,Latin America & Caribbean,2.200055556
+2014,Latin America & Caribbean,2.175138889
+2015,Latin America & Caribbean,2.149180556
+2016,Latin America & Caribbean,2.120097222
+2017,Latin America & Caribbean,2.090611111
+2018,Latin America & Caribbean,2.074861111
+1960,Middle East & North Africa,6.70375
+1961,Middle East & North Africa,6.71055
+1962,Middle East & North Africa,6.73345
+1963,Middle East & North Africa,6.73835
+1964,Middle East & North Africa,6.75005
+1965,Middle East & North Africa,6.74655
+1966,Middle East & North Africa,6.73725
+1967,Middle East & North Africa,6.72275
+1968,Middle East & North Africa,6.6968
+1969,Middle East & North Africa,6.6613
+1970,Middle East & North Africa,6.62155
+1971,Middle East & North Africa,6.574
+1972,Middle East & North Africa,6.5163
+1973,Middle East & North Africa,6.4353
+1974,Middle East & North Africa,6.369
+1975,Middle East & North Africa,6.3334
+1976,Middle East & North Africa,6.2633
+1977,Middle East & North Africa,6.19265
+1978,Middle East & North Africa,6.1206
+1979,Middle East & North Africa,6.0533
+1980,Middle East & North Africa,5.9739
+1981,Middle East & North Africa,5.8879
+1982,Middle East & North Africa,5.80115
+1983,Middle East & North Africa,5.7055
+1984,Middle East & North Africa,5.5993
+1985,Middle East & North Africa,5.47945
+1986,Middle East & North Africa,5.3451
+1987,Middle East & North Africa,5.2021
+1988,Middle East & North Africa,5.05035
+1989,Middle East & North Africa,4.8889
+1990,Middle East & North Africa,4.812047619
+1991,Middle East & North Africa,4.646095238
+1992,Middle East & North Africa,4.484285714
+1993,Middle East & North Africa,4.323
+1994,Middle East & North Africa,4.16552381
+1995,Middle East & North Africa,4.012190476
+1996,Middle East & North Africa,3.880857143
+1997,Middle East & North Africa,3.746571429
+1998,Middle East & North Africa,3.619904762
+1999,Middle East & North Africa,3.499142857
+2000,Middle East & North Africa,3.392
+2001,Middle East & North Africa,3.287857143
+2002,Middle East & North Africa,3.201857143
+2003,Middle East & North Africa,3.132428571
+2004,Middle East & North Africa,3.060857143
+2005,Middle East & North Africa,3.000238095
+2006,Middle East & North Africa,2.952809524
+2007,Middle East & North Africa,2.912666667
+2008,Middle East & North Africa,2.885142857
+2009,Middle East & North Africa,2.854904762
+2010,Middle East & North Africa,2.828190476
+2011,Middle East & North Africa,2.803095238
+2012,Middle East & North Africa,2.776809524
+2013,Middle East & North Africa,2.742666667
+2014,Middle East & North Africa,2.713047619
+2015,Middle East & North Africa,2.677238095
+2016,Middle East & North Africa,2.640428571
+2017,Middle East & North Africa,2.596952381
+2018,Middle East & North Africa,2.557333333
+1960,North America,3.7325
+1961,North America,3.6865
+1962,North America,3.571
+1963,North America,3.463
+1964,North America,3.323
+1965,North America,3.014
+1966,North America,2.735
+1967,North America,2.543
+1968,North America,2.425
+1969,North America,2.395
+1970,North America,2.369
+1971,North America,2.2035
+1972,North America,1.995
+1973,North America,1.8845
+1974,North America,1.836
+1975,North America,1.799
+1976,North America,1.767
+1977,North America,1.786
+1978,North America,1.764
+1979,North America,1.781
+1980,North America,1.78975
+1981,North America,1.756
+1982,North America,1.75875
+1983,North America,1.7395
+1984,North America,1.72825
+1985,North America,1.757
+1986,North America,1.75625
+1987,North America,1.776
+1988,North America,1.807
+1989,North America,1.892
+1990,North America,1.9555
+1991,North America,1.88125
+1992,North America,1.878
+1993,North America,1.85975
+1994,North America,1.8355
+1995,North America,1.805666667
+1996,North America,1.784
+1997,North America,1.7605
+1998,North America,1.764166666
+1999,North America,1.758083333
+2000,North America,1.761333333
+2001,North America,1.763633333
+2002,North America,1.763966667
+2003,North America,1.790866667
+2004,North America,1.785766667
+2005,North America,1.7868
+2006,North America,1.818066667
+2007,North America,1.8463
+2008,North America,1.840933333
+2009,North America,1.81
+2010,North America,1.772633333
+2011,North America,1.698166667
+2012,North America,1.6949
+2013,North America,1.6915
+2014,North America,1.691433333
+2015,North America,1.6755
+2016,North America,1.657933333
+2017,North America,1.620533333
+2018,North America,1.609433333
+1960,South Asia,6.479625
+1961,South Asia,6.473875
+1962,South Asia,6.466
+1963,South Asia,6.45675
+1964,South Asia,6.44625
+1965,South Asia,6.434875
+1966,South Asia,6.42125
+1967,South Asia,6.405
+1968,South Asia,6.384875
+1969,South Asia,6.36125
+1970,South Asia,6.334125
+1971,South Asia,6.303375
+1972,South Asia,6.270125
+1973,South Asia,6.234875
+1974,South Asia,6.198625
+1975,South Asia,6.162125
+1976,South Asia,6.126375
+1977,South Asia,6.092
+1978,South Asia,6.0585
+1979,South Asia,6.024
+1980,South Asia,5.98675
+1981,South Asia,5.944125
+1982,South Asia,5.89475
+1983,South Asia,5.836
+1984,South Asia,5.7675
+1985,South Asia,5.688
+1986,South Asia,5.598
+1987,South Asia,5.499
+1988,South Asia,5.393125
+1989,South Asia,5.281125
+1990,South Asia,5.165125
+1991,South Asia,5.04525
+1992,South Asia,4.923
+1993,South Asia,4.800125
+1994,South Asia,4.6765
+1995,South Asia,4.552875
+1996,South Asia,4.429
+1997,South Asia,4.304625
+1998,South Asia,4.179625
+1999,South Asia,4.056125
+2000,South Asia,3.935375
+2001,South Asia,3.820125
+2002,South Asia,3.71125
+2003,South Asia,3.609375
+2004,South Asia,3.515
+2005,South Asia,3.426875
+2006,South Asia,3.3425
+2007,South Asia,3.260375
+2008,South Asia,3.1785
+2009,South Asia,3.096875
+2010,South Asia,3.01625
+2011,South Asia,2.938125
+2012,South Asia,2.863875
+2013,South Asia,2.794875
+2014,South Asia,2.731625
+2015,South Asia,2.67375
+2016,South Asia,2.620875
+2017,South Asia,2.571625
+2018,South Asia,2.52525
+1960,Sub-Saharan Africa,6.574659574
+1961,Sub-Saharan Africa,6.599021277
+1962,Sub-Saharan Africa,6.621425532
+1963,Sub-Saharan Africa,6.641382979
+1964,Sub-Saharan Africa,6.658276596
+1965,Sub-Saharan Africa,6.672170213
+1966,Sub-Saharan Africa,6.683468085
+1967,Sub-Saharan Africa,6.693382979
+1968,Sub-Saharan Africa,6.702
+1969,Sub-Saharan Africa,6.709723404
+1970,Sub-Saharan Africa,6.716829787
+1971,Sub-Saharan Africa,6.723531915
+1972,Sub-Saharan Africa,6.729489362
+1973,Sub-Saharan Africa,6.734085106
+1974,Sub-Saharan Africa,6.736787234
+1975,Sub-Saharan Africa,6.736957447
+1976,Sub-Saharan Africa,6.687729167
+1977,Sub-Saharan Africa,6.72787234
+1978,Sub-Saharan Africa,6.717276596
+1979,Sub-Saharan Africa,6.701702128
+1980,Sub-Saharan Africa,6.680808511
+1981,Sub-Saharan Africa,6.654191489
+1982,Sub-Saharan Africa,6.556729167
+1983,Sub-Saharan Africa,6.584042553
+1984,Sub-Saharan Africa,6.538574468
+1985,Sub-Saharan Africa,6.487617021
+1986,Sub-Saharan Africa,6.433021277
+1987,Sub-Saharan Africa,6.304854167
+1988,Sub-Saharan Africa,6.31393617
+1989,Sub-Saharan Africa,6.249489362
+1990,Sub-Saharan Africa,6.183148936
+1991,Sub-Saharan Africa,6.113404255
+1992,Sub-Saharan Africa,5.975520833
+1993,Sub-Saharan Africa,5.972510638
+1994,Sub-Saharan Africa,5.905234043
+1995,Sub-Saharan Africa,5.836382979
+1996,Sub-Saharan Africa,5.771468085
+1997,Sub-Saharan Africa,5.631479167
+1998,Sub-Saharan Africa,5.568333333
+1999,Sub-Saharan Africa,5.510791667
+2000,Sub-Saharan Africa,5.452729167
+2001,Sub-Saharan Africa,5.393208333
+2002,Sub-Saharan Africa,5.340958333
+2003,Sub-Saharan Africa,5.287041667
+2004,Sub-Saharan Africa,5.234979167
+2005,Sub-Saharan Africa,5.186208333
+2006,Sub-Saharan Africa,5.1295625
+2007,Sub-Saharan Africa,5.077958333
+2008,Sub-Saharan Africa,5.022791667
+2009,Sub-Saharan Africa,4.9645
+2010,Sub-Saharan Africa,4.899395833
+2011,Sub-Saharan Africa,4.839770833
+2012,Sub-Saharan Africa,4.775520833
+2013,Sub-Saharan Africa,4.704666667
+2014,Sub-Saharan Africa,4.6366875
+2015,Sub-Saharan Africa,4.568270833
+2016,Sub-Saharan Africa,4.5025625
+2017,Sub-Saharan Africa,4.435916667
+2018,Sub-Saharan Africa,4.368145833
+1960,World-Avg,5.504588383
+1961,World-Avg,5.488628802
+1962,World-Avg,5.489780212
+1963,World-Avg,5.488656048
+1964,World-Avg,5.451051644
+1965,World-Avg,5.408397657
+1966,World-Avg,5.359142539
+1967,World-Avg,5.32082945
+1968,World-Avg,5.268044397
+1969,World-Avg,5.214336337
+1970,World-Avg,5.151724454
+1971,World-Avg,5.087278654
+1972,World-Avg,5.026765051
+1973,World-Avg,4.959335385
+1974,World-Avg,4.89788733
+1975,World-Avg,4.818237592
+1976,World-Avg,4.751785273
+1977,World-Avg,4.6910327
+1978,World-Avg,4.632741805
+1979,World-Avg,4.585712788
+1980,World-Avg,4.53603689
+1981,World-Avg,4.474941323
+1982,World-Avg,4.417993177
+1983,World-Avg,4.376316788
+1984,World-Avg,4.323668842
+1985,World-Avg,4.266279117
+1986,World-Avg,4.208566939
+1987,World-Avg,4.142289263
+1988,World-Avg,4.091589877
+1989,World-Avg,4.016684057
+1990,World-Avg,3.955951056
+1991,World-Avg,3.872004926
+1992,World-Avg,3.778216825
+1993,World-Avg,3.715826285
+1994,World-Avg,3.629635627
+1995,World-Avg,3.543594652
+1996,World-Avg,3.496319717
+1997,World-Avg,3.406397126
+1998,World-Avg,3.35992527
+1999,World-Avg,3.316236638
+2000,World-Avg,3.236571829
+2001,World-Avg,3.179600038
+2002,World-Avg,3.128624884
+2003,World-Avg,3.098603539
+2004,World-Avg,3.074765414
+2005,World-Avg,3.043640276
+2006,World-Avg,3.010381535
+2007,World-Avg,2.984784437
+2008,World-Avg,2.962432837
+2009,World-Avg,2.932249367
+2010,World-Avg,2.907112895
+2011,World-Avg,2.879198773
+2012,World-Avg,2.845257931
+2013,World-Avg,2.817298344
+2014,World-Avg,2.794729923
+2015,World-Avg,2.761140087
+2016,World-Avg,2.735140482
+2017,World-Avg,2.695436753
+2018,World-Avg,2.66458701
